@@ -3,8 +3,8 @@ import { gql } from "@apollo/client";
 // Then recall it with the name as the type.
 // you want name to be equal to the name property
 export const GET_WEATHER_QUERY = gql`
-  query getCityByName(name: String!) { 
-    getCityByName(name: $name) {  
+  query getCityByName($name: String!) {
+    getCityByName(name: $name) {
       name
       country
       weather {
@@ -12,7 +12,7 @@ export const GET_WEATHER_QUERY = gql`
           title
           description
           icon
-        } 
+        }
         temperature {
           actual
           feelsLike
